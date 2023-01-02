@@ -1,0 +1,64 @@
+System:
+  num_workers: 4 #number of workers
+
+Model:
+  arch: wideresnet
+
+Data:
+  dataset: cifar10 # choices=['cifar10', 'cifar100']
+  num_labeled: 1000 #number of labeled train data; Valid Values: [1-(< max num train data)]
+  reduced_data: 40 #percentage of reduced data passed to Model
+  mu: 7 #coefficient of unlabeled batch size eg. unlabeled batchsize = batchsize * mu = 64 * 7 = 448
+  lambda_u: 1 # coefficient of unlabeled loss
+  T: 1 #pseudo label temperature
+  threshold: 1 # pseudo label threshold
+  cutout: False # Default -True:Enables Cutout Augmentation during RandAugment(Strong Aug.)
+  run_mixup: False #
+
+Train:
+  total_steps: 102400 #aka = 2**20 # number of total steps to run
+  eval_step: 1024 # number of eval steps to run
+  start_epoch: 0 # manual epoch number (useful on restarts)
+  batch_size: 64 #train batch size
+  lr: 0.03 #initial learning rate
+  wdecay: 5e-4 # weight decay
+  nesterov: True # use nesterov momentum
+  use_ema: True # use EMA (Exponential Moving Average) model
+  ema_decay: 0.999 # EMA decay rate
+  warmup: 0 #warmup epochs (unlabeled data based)
+
+
+Misc:
+  out: result/config_fixmatch_cifar10red40_1000_1.0thresh # directory to output the result
+  resume:  # path to latest checkpoint (default: none)
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Train:
+#  batch_size: 128
+#  learning_rate: 0.1
+#  reg: 0.0005
+#  epochs: 10
+#  steps: [6, 8]
+#  warmup: 0
+#  momentum: 0.9
+
+#network:
+#  model: TwoLayerNet # TwoLayerNet or VanillaCNN or MyModel or ResNet-32
+#
+#data:
+#  imbalance: regular # regular or imbalance
+#  save_best: True
+#
+#loss:
+#  loss_type: CE # CE or Focal
