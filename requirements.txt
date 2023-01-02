@@ -1,8 +1,0 @@
-numpy
-progress
-tensorboard
-tqdm
-torchvision==0.13.1
-torch==1.12.1
-jupyter
-notebook
