@@ -64,15 +64,22 @@ _Instructions on installing and setting up our app on your Google Colab._
       ```
     The yaml files we ran for our project are available in ".\7643_final_project\config\"
 
+## Results
+
+### CIFAR10
+| #Labels | 40 | 70 | 250 | 1000 | 4000 | 50000 |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Paper (RA) | 86.19 ± 3.37 | - |94.93 ± 0.65 | - |95.74 ± 0.05| - |
+| This code | - |92.11 | 94.67 | 95.14 | 95.53 | 96.67
 <!-- Authors -->
 ## Authors
 
-* Vimal Venugopal - vvenugopal32@gatech.edu
-* John Dugan - jdugan3@gatech.edu
-* Andrew Price - aprice63@gatech.edu
-* Caleb Goertel - cgoertel@gmail.com
+* Vimal Venugopal - vimalkumar.engr@gmail.com
 
-Project Link: [https://github.gatech.edu/jdugan3/7643_final_project](https://github.gatech.edu/jdugan3/7643_final_project)
+Project Link: [https://github.com/vimvenu-rgb/Fix_Mix_Match-Project)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 
