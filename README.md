@@ -1,6 +1,6 @@
 ## About The Project
 
-We plan to re-implement the two holistic semi-supervised learning approaches: MixMatch [1] and FixMatch [2] in Pytorch.
+We plan to re-implement the two holistic semi-supervised learning approaches: [FixMatch](https://arxiv.org/abs/2001.07685) and [MixMatch](https://arxiv.org/abs/1905.02249) in Pytorch.
 
 
 Use the `README.md` to get started.
